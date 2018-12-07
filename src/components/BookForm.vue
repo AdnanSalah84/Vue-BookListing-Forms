@@ -11,11 +11,11 @@
     <div>
       <label for="borrowed">
         Borrowed
-        <input type="radio" v-model="bookData.ownership">
+        <input type="radio" value="borrowed" v-model="bookData.ownership">
       </label>
       <label for="bought">
         Bought
-        <input type="radio" v-model="bookData.ownership">
+        <input type="radio" value="bought" v-model="bookData.ownership">
       </label>
     </div>
     <button type="submit" name="button">Add Book</button>
@@ -28,8 +28,6 @@ export default {
   props: ["books"],
   data() {
     return {
-      // bookTitle: "",
-      // bookAuthor: ""
       bookData: {
         bookTitle: "",
         bookAuthor: "",
